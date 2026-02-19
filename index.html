@@ -18,13 +18,11 @@
     <!-- Income -->
     <section class="card">
       <h2>Enter Your Income</h2>
-      <form id="income-form">
         <label for="income">Income Annually</label>
-        <input id="income" type="number" step="0.01" min="0" placeholder="e.g. 65000" />
+        <input id="income" type="text" step="0.01" min="0" placeholder="e.g. 65000" />
 
-        <button type="submit">Save Income</button>
+        <button id="income-btn" type="submit">Save Income</button>
         <p id="income-msg" class="msg" aria-live="polite"></p>
-      </form>
     </section>
 
     <!-- Add Expense -->
@@ -35,7 +33,7 @@
         <input id="title" type="text" maxlength="60" placeholder="e.g. Chipotle" required />
 
         <label for="amount">Expense Amount</label>
-        <input id="amount" type="number" step="0.01" min="0.01" placeholder="e.g. 12.99" required />
+        <input id="amount" type="submit" step="0.01" min="0.01" placeholder="e.g. 12.99" required />
 
         <label for="category">Select Category</label>
         <select id="category" required>
@@ -56,19 +54,18 @@
 
 
     <!-- Summary -->
-     <section class="income">
-        <div>
+     <section class="card-summary">
             <h2>Summary</h2>
-        </div>
         <div>
             <h3>Current Income</h3>
-            <p>Income amount:</p>
+            <p id="income-summary">Income amount:</p>
         </div>
         <div>
             <h3>All expenses</h3>
             <p>Empty</p>
         </div>
      </section>
+    </main>
 
 
   <script src="script.js"></script>
